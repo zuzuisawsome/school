@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gaming Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Gaming Portfolio</h1>
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('about')">About Me</button>
+        <button onclick="showPage('projects')">Projects</button>
+        <button onclick="showPage('skills')">Skills</button>
+        <button onclick="showPage('contact')">Contact</button>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="page active">
+        <h2>Welcome to My Website!</h2>
+        <p>Welcome to my personal portfolio. I made this website to show my interests, projects, and skills.</p>
+        <p>I enjoy gaming, technology, and learning how to code.</p>
+        <button class="main-button" onclick="showPage('projects')">View My Projects</button>
+
+        <div class="art">
+            <svg viewBox="0 0 400 180" role="img" aria-label="Original purple gaming controller illustration">
+                <rect x="20" y="20" width="360" height="140" rx="25" fill="#211b49"/>
+                <path d="M115 55 Q70 45 55 105 Q45 145 85 140 L130 115 H270 L315 140 Q355 145 345 105 Q330 45 285 55 Z" fill="#8764ff"/>
+                <rect x="100" y="82" width="65" height="12" rx="5" fill="#ffffff"/>
+                <rect x="126" y="55" width="12" height="65" rx="5" fill="#ffffff"/>
+                <circle cx="260" cy="80" r="10" fill="#ffffff"/>
+                <circle cx="285" cy="105" r="10" fill="#ffffff"/>
+                <circle cx="235" cy="105" r="10" fill="#ffffff"/>
+                <circle cx="260" cy="130" r="10" fill="#ffffff"/>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="page">
+        <h2>About Me</h2>
+        <p>Hi! I'm a student who enjoys computers, gaming, and technology.</p>
+        <p>Some of my favorite things to do are play games, learn new computer skills, and work on projects.</p>
+        <p>My goal is to keep improving my skills and learn more about coding.</p>
+    </section>
+
+    <section id="projects" class="page">
+        <h2>My Projects</h2>
+        <p>Here are some things I have worked on in school.</p>
+
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>HTML Website</td>
+                <td>A website made using HTML and CSS.</td>
+            </tr>
+            <tr>
+                <td>Python Coding</td>
+                <td>A beginner coding project.</td>
+            </tr>
+            <tr>
+                <td>Art Project</td>
+                <td>A creative project made for class.</td>
+            </tr>
+        </table>
+
+        <p>One website I like is <a href="https://www.roblox.com/" target="_blank">Roblox</a>.</p>
+    </section>
+
+    <section id="skills" class="page">
+        <h2>My Skills</h2>
+        <p>These are some skills I have learned or am working on.</p>
+        <ul>
+            <li>HTML and CSS</li>
+            <li>Basic Python</li>
+            <li>Problem solving</li>
+            <li>Computer troubleshooting</li>
+            <li>Creativity</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="page">
+        <h2>Contact Me</h2>
+        <p>Use this form to leave a message.</p>
+
+        <form onsubmit="sendMessage(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" placeholder="Write your message" required></textarea>
+
+            <button type="submit" class="main-button">Send Message</button>
+        </form>
+
+        <p id="response"></p>
+    </section>
+</main>
+
+<footer>
+    <p>My Gaming Portfolio | Created by Me</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
